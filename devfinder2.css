@@ -4,15 +4,22 @@
     box-sizing: border-box;
   }
   
-  :root {
-    --bg-color: #f6f8ff;
-    --text-color: #4b6a9b;
-    --bg-card-color: #fefefe;
-    --bg-btn-color: #0079ff;
+ 
+  :root{
+    /*
+    --primary-color: #fefefe;
+    --secondary-color: #000000:
+    */
+    --primary-color: #fefefe;
+    --secondary-color: #000000:
+
+  }
+  #moonicon{
+cursor: pointer;
   }
   
   body {
-    background-color: var(--bg-color);
+    background-color: var(--secondary-color);
     font-family: 'Space Mono', monospace;
     padding: 24px;
   }
@@ -31,7 +38,7 @@
   
   .theme {
     text-transform: uppercase;
-    color: var(--text-color);
+    color: #4b6a9b;
     letter-spacing: 2px;
     font-weight: bold;
     font-size: 13px;
@@ -41,7 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--bg-card-color);
+    background-color: var(--primary-color);
     border-radius: 8px;
     padding: 6px;
     width: 100%;
@@ -56,14 +63,14 @@
   }
   
   input::placeholder {
-    color: var(--text-color);
+    color: #4b6a9b;
   }
   
   button {
-    background-color: var(--bg-btn-color);
+    background-color: #0079ff;
     border: none;
     border-radius: 10px;
-    color: #fff;
+    color: var(--primary-color);
     padding: 15px 18px;
     font-size: 14px;
     font-weight: 700;
@@ -74,7 +81,7 @@
   main {
     margin-top: 15px;
     padding: 22px;
-    background-color: var(--bg-card-color);
+    background-color: var(--secondaryz-color);
     border-radius: 15px;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
   }
@@ -85,7 +92,7 @@
   }
   
   .info > div > p {
-    color: var(--bg-btn-color);
+    color: #0079ff;
   }
   
   .info > div > span {
@@ -95,7 +102,7 @@
   
   .bio {
     margin-top: 20px;
-    color: var(--text-color);
+    color: #4b6a9b;
     line-height: 25px;
     font-size: 13px;
   }
@@ -107,8 +114,8 @@
     gap: 20px;
     justify-content: center;
     text-align: center;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--primary-color);
+    color: #4b6a9b;
     padding: 20px;
     border-radius: 10px;
   }
@@ -137,7 +144,7 @@
   }
   
   .socials > a > p {
-    color: var(--text-color);
+    color:#4b6a9b;
     font-size: 13px;
   }
 
@@ -145,7 +152,7 @@
 
     main{
       padding: 22px;
-      background-color: var(--bg-card-color);
+      background-color: var(--primary-color);
       width: 600px;
       margin-left: 1px;
       margin-top: 15px;
@@ -163,7 +170,22 @@
       align-items: center;
     }
 
- .twitt{
- margin-left: 100px;
- }
+
   }
+  /* Define styles for light mode */
+.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Define styles for dark mode */
+.dark-mode {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+}
+
+/* Apply background and text color based on mode */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
